@@ -3,6 +3,7 @@ import { supabase } from './supabase'
 import Auth from './Auth'
 import AddSubscription from './AddSubscription'
 import SubscriptionList from './SubscriptionList'
+import ProUpgrade from './ProUpgrade'
 import './App.css'
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
       <hr style={{ margin: '30px 0', borderColor: '#444' }} />
 
       <SubscriptionList key={refreshTrigger} session={session} />
+      
+      <hr style={{ margin: '30px 0', borderColor: '#444' }} />
+      <ProUpgrade />
 
     </div>
   )
