@@ -1,4 +1,4 @@
-📋 ## Project: Subscription Tracker
+## Project: Subscription Tracker
 
 Live Demo: https://subscription-tracker-ashen.vercel.app/ GitHub: https://github.com/Astathiel
 
