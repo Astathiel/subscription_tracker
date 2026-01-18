@@ -1,16 +1,26 @@
-# React + Vite
+📋 Project: Subscription Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo: https://subscription-tracker-ashen.vercel.app/ GitHub: https://github.com/Astathiel
 
-Currently, two official plugins are available:
+## Overview
+A full-stack serverless application designed to track monthly recurring expenses. The app allows users to securely log in, manage a personal dashboard of subscriptions, calculate total monthly costs, and simulate a premium upgrade flow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technical Stack
+Frontend: React (Vite), JavaScript (ES6+), CSS3
 
-## React Compiler
+Backend (BaaS): Supabase (PostgreSQL, Authentication, Edge API)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Payments: Stripe (Payment Links, Test Mode Integration)
 
-## Expanding the ESLint configuration
+Deployment/DevOps: Vercel (CI/CD from GitHub), Git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features Implemented
+Secure Authentication: Integrated Supabase Auth (Magic Link/Email) to handle user sessions and protected routes.
+
+Database Security: implemented Row Level Security (RLS) policies in PostgreSQL to ensure strict data isolation (users can only access their own records).
+
+Real-time UI: Utilized React State and Effect hooks to build a responsive "Add & Refresh" cycle without page reloads.
+
+Payment Integration: Connected a "Pro" upgrade feature using Stripe Payment Links.
+
+Environment Management: Configured secure .env variables for API keys in both local development and production environments.
